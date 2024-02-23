@@ -48,16 +48,21 @@ const TETROMINOES = {
         [1, 0, 0]
     ],
     "I": [
-        [1, 0, 0, 0],
-        [1, 0, 0, 0],
-        [1, 0, 0, 0],
-        [1, 0, 0, 0]
+        [0, 0, 0, 0],
+        [1, 1, 1, 1],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0]
     ]
         
 }
 
 function convertPositionToIndex(row, column){
     return row * PLAYFIELD_COLUMNS + column;
+}
+
+function getRandomElement(array){
+    const randomIndex = Math.floor(Math.random() * array.length)
+    return array[randomIndex];
 }
 
 let playfield;
@@ -77,17 +82,16 @@ function generatePlayField(){
 function generateTetromino(){
     const randomFigure = Math.floor(Math.random() * TETROMINO_NAMES.length);
 
-    const name = TETROMINO_NAMES[randomFigure];
+    const name = getRandomElement(TETROMINO_NAMES);
     const matrix = TETROMINOES[name];
-    const column = Math.floor((PLAYFIELD_COLUMNS - matrix.length) / 2);
+    const column = PLAYFIELD_COLUMNS / 2 - Math.floor((matrix.length) / 2);
     // console.log(matrix);
 
     tetromino = {
         name,
         matrix,
         row: 3,
-        column: 4
-        
+        column: column
     }
 }
 
