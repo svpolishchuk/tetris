@@ -1,0 +1,55 @@
+// @font-face {
+//     font-family: icomoon;font-familyfont-familyfont-familyfont-family
+//     font-style: normal;font-stylefont-stylefont-stylefont-style
+//     font-weight: normal;font-weightfont-weightfont-weightfont-weight
+//     src:  url('fonts/icomoon.eot?qvu9t0');srcsrcsrcsrc
+//     src:  url('fonts/icomoon.eot?qvu9t0#iefix') format('embedded-opentype'),
+//         url('fonts/icomoon.ttf?qvu9t0') format('truetype'),
+//         url('fonts/icomoon.woff?qvu9t0') format('woff'),
+//         url('fonts/icomoon.svg?qvu9t0#icomoon') format('svg');srcsrcsrcsrc
+//     font-display: block;font-displayfont-displayfont-displayfont-display
+// }
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: icomoon !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    speak: never;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-down::before {
+    content: "\e902";
+  }
+
+  .icon-left::before {
+    content: "\e903";
+  }
+
+  .icon-right::before {
+    content: "\e904";
+  }
+
+  .icon-up::before {
+    content: "\e905";
+  }
+
+  .icon-pause::before {
+    content: "\e900";
+  }
+
+  .icon-without-sound::before {
+    content: "\e901";
+  }
+
+  .icon-restart::before {
+    content: "\ea2e";
+  }

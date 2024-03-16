@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+}
+
+
+body {
+    height: 100vh;
+    background: linear-gradient(38deg, rgb(140, 142, 202), #5d9cec94, #dda9cbd1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.grid {
+    background-color: rgb(39, 23, 83);
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    gap: 0.5vh;
+    padding: 0.5vh;
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 0.3vh;
+}
+
+.grid>div {
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background-color: rgba(9, 9, 9, 0.2);
+    border-radius: 0.3vh;
+
+}
+
+.figure {
+    -webkit-box-shadow: inset 1px 1px 4px 5px rgba(0,0,0,0.47);
+    box-shadow: inset 1px 1px 4px 5px rgba(0,0,0,0.47);
+}
+
+.grid > .O {
+    background-color: rgb(48, 118, 66);
+}
+
+.grid > .J {
+    background-color: rgb(155, 29, 29);
+}
+
+.grid > .L {
+    background-color: rgb(234, 121, 9);
+}
+
+.grid > .T {
+    background-color: rgb(226, 219, 14);
+}
+
+.grid > .Z {
+    background-color: rgb(41, 149, 216);
+}
+
+.grid > .S {
+    background-color: rgb(211, 20, 109);
+}
+
+.grid > .I {
+    background-color: rgb(130, 9, 196);
+}
+
+

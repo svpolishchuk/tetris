@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link href="./../img/favicon/favicon.ico" rel="icon" sizes="48x48" />
+        <link href="./../img/favicon/icon.svg" type="image/svg+xml" rel="icon" />
+        <link href="./../img/favicon/apple-touch-icon.png" rel="apple-touch-icon" />
+        <!-- 180×180 -->
+        <link href="./../img/favicon/site.webmanifest" rel="manifest" />
+
+        <title>Tetris</title>
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- prettier-ignore -->
+        @@include('./modules/_loader.html')
+        
+
+        <div class="wrapper">
+            <!-- prettier-ignore -->
+        @@include('./modules/_header.html')
+
+        <main class="main">
+            <section class="tetris non-select">
+                <div class="tetris__title">SUPER</div>
+                <div class="tetris__decor"></div>
+                <div class="tetris__version">v 0.6</div>
+                <div class="tetris__left-gamepad">
+                    <div class="left-gamepad__btns-container">
+                        <button class="left-gamepad__btn btn-restart icon-restart"></button>
+                        <button class="left-gamepad__btn btn-pause icon-pause"></button>
+                    </div>
+                </div>
+
+                <div class="tetris__right-gamepad right-gamepad">
+                    <div class="right-gamepad__btns-container">
+                        <button class="right-gamepad__btn btn-rotate icon-up"></button>
+                        <button class="right-gamepad__btn btn-down icon-down"></button>
+                        <button class="right-gamepad__btn btn-left icon-left"></button>
+                        <button class="right-gamepad__btn btn-right icon-right"></button>
+                    </div>
+                </div>
+                <div class="tetris__inner">
+                    <div class="display__border">
+                        <div class="display__wrapper">
+                            <div class="tetris__display display">
+                                <div class="display__pause-title"><!-- PAUSE --></div>
+                                <div class="display__game-over-title none"><!-- GAME OVER --></div>
+                                <div class="display__play-field play-field">
+                                    <!-- <div class="play-field__cell classic"></div> -->
+                                </div>
+                                <div class="display__game-statistics game-statistics">
+                                    <div class="game-statistics__block">
+                                        <p class="game-statistics__title game-statistics__max">
+                                            <!-- Max -->
+                                        </p>
+                                        <div class="game-statistics__value">
+                                            000000<span id="maximum-points"></span>
+                                        </div>
+                                    </div>
+                                    <div class="game-statistics__block">
+                                        <p class="game-statistics__title game-statistics__cleans">
+                                            <!-- Cleans -->
+                                        </p>
+                                        <div class="game-statistics__value">000000<span id="cleared-lines"></span></div>
+                                    </div>
+                                    <div class="game-statistics__block">
+                                        <p class="game-statistics__title game-statistics__lvl">
+                                            <!-- Level -->
+                                        </p>
+                                        <div class="game-statistics__value">
+                                            <span id="level"></span>
+                                        </div>
+                                    </div>
+                                    <div class="game-statistics__block game-statistics__block-next">
+                                        <p class="game-statistics__title game-statistics__next">
+                                            <!-- Next -->
+                                        </p>
+                                        <div class="game-statistics__value next-tetromino" id="next-tetromino">
+                                            <!-- <div class="next-tetromino__row">
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                        </div>
+                                        <div class="next-tetromino__row">
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                        </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="game-statistics__block">
+                                        <p class="game-statistics__title game-statistics__time">
+                                            <!-- Time -->
+                                        </p>
+                                        <div class="game-statistics__value">
+                                            <span class="icon-without-sound" id="icon-without-sound"></span>
+                                            <span class="icon-pause" id="icon-pause"></span>
+                                            <span id="game-time">00:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tetris__decor"></div>
+            </section>
+            
+        </main>
+
+        <!-- prettier-ignore -->
+        @@include('./modules/_footer.html')
+        </div>
+
+        <!-- prettier-ignore -->
+        @@include('./modules/_info-window.html')
+
+        <script src="./js/main.js" type="module"></script>
+    </body>
+</html>

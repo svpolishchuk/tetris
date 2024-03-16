@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+}
+
+body{
+    background: 
+        linear-gradient(320deg, #5f78f6, rgb(230, 81, 7));
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+i{
+    cursor: pointer;
+    font-size: 30px;
+}
+.container {
+    display: flex;
+    justify-content: center; /* Розміщує всі елементи у центрі горизонтально */
+    align-items: center; /* Розміщує всі елементи у центрі вертикально */
+    height: 100vh; /* Зробити контейнер по висоті вікна браузера */
+}
+
+.centered-items {
+    display: flex;
+    align-items: center; /* Розміщує елементи центрально вертикально */
+}
+
+.score {
+    margin-left: 10px; /* Додатковий відступ між елементами */
+}
+.summaries{
+    display: flex;
+    justify-content: center; /* Розміщує всі елементи у центрі горизонтально */
+    align-items: center; /* Розміщує всі елементи у центрі вертикально */
+    background-color: #5f78f6;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.points{
+    left: 0;
+}
+.overlay{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.btn-restart{
+    width: 100px;
+    height: 60px;
+    background-color: aqua;
+    border-radius: 20px;
+    font-size: 25px;
+    box-shadow: 0 0 0 5 rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    margin-right: 15px;
+}
+.grid{
+    margin-left: 12%;
+    margin-top: 10px;
+    background: rgb(41, 41, 54);
+    padding: 0.5vh;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    gap: 0.5vh;
+    height: 90%;
+}
+
+.grid > div{
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background-color: rgba(182, 166, 166, 0.2);
+    border-radius: 0.3vh;
+}
+
+.grid .O{
+    background-color: rgb(54, 228, 244);
+}
+
+.grid .J{
+    background-color: rgb(255, 249, 142);
+}
+
+.grid .S{
+    background-color: rgb(1, 119, 44);
+}
+
+.grid .L{
+    background-color: rgb(255, 74, 201);
+}
+
+.grid .Z{
+    background-color: rgb(200, 7, 17);
+}
+
+.grid .T{
+    background-color: rgb(8, 1, 212);
+}
+
+.grid .I{
+    background-color: rgb(146, 0, 151);
+}

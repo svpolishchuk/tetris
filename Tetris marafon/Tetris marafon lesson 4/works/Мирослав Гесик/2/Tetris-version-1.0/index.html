@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris by MyroslavHesyk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/af737f80ce.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <!-- <iframe src="./assets/audio/tetris.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+    </iframe>  -->
+    
+    <header>
+        <!-- <div class="sound">
+            <button id="soundButton" class="sound-off pixel"><i class="fas fa-volume-mute"></i></button>
+        </div>  -->
+        <div class="header-text">
+            <h1 class="title">Tetris original</h1>
+            <h3 class="subtitle"><span id="aboutToggle">by Myroslav Hesyk</span>  <span id="infoToggle">| info</span></h3>
+        </div>
+    </header>
+    
+    <div class="main">
+        <div class="main-score-block">
+        <div class="main-score">
+                <div class="score-block">
+                    <p class="score-title">Score</p>
+                    <div class="score-value" data-type="clean" data-meaning="000"><span>000</span>000</div>
+                </div>
+        </div>
+        <div class="main-score">
+            <div class="score-block">
+                <p class="score-title">Level</p>
+                <div class="score-value" data-type="lvl" data-meaning="1">1</div>
+            </div>
+        </div>
+        <div class="main-score">
+            <div class="score-block">
+                <p class="score-title">Time</p>
+                <div class="score-value" id="stopwatch">
+                    <span>00:00</span>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="grid">
+            <!-- <div></div>
+            <div></div>
+            <div></div> -->
+        </div>
+        <div class="buttons">
+            <div class="buttons-line">
+            <button id="btn-RELOAD" class="btn-RELOAD btn-pixel"><i class="fa-solid fa-trash reload"></i></button>
+            <button id="btn-UP" class="btn-UP btn-pixel"><i class="fa-solid fa-square-caret-up "></i></button>
+            <!-- <button id="btn-GITHUB" class="btn-GITHUB btn-pixel"><a href="https://github.com/MyroslavHesyk/Tetris" target="_blank"><i class="fa-brands fa-github github"></i></a></button> -->
+            <button id="soundButton" class="sound-off btn-pixel"><i class="fas fa-volume-mute"></i></a></button>
+
+           </div>
+            <div class="buttons-line">
+                <button id="btn-LEFT" class="LEFT btn-pixel"><i class="fa-solid fa-square-caret-left"></i></button>
+                <button id="btn-DOWN" class="btn-DOWN btn-pixel"><i class="fa-solid fa-square-caret-down"></i></button>
+                <button id="btn-RIGHT" class="btn-RIGHT btn-pixel"><i class="fa-solid fa-square-caret-right"></i></button>
+            </div>
+       </div>
+
+       
+    </div> 
+    <div id="infoDialog" title="">
+        <h3 class="title-info">Version 1.0</h3>
+        <ul class="ul-info">
+            <li class="subtitle-info">Desktop and mobile versions are available</li>
+            <li class="subtitle-info">Added buttons:
+                <ul class="ul-info">
+                    <li><b>trash</b> - refresh the page</li>
+                    <li><b>up</b> - rotation of the tetromino</li> 
+                    <li><b>speaker</b> - on/off music</li>
+                    <li><b>left/down/right</b> - move the tetromino</li>
+                </ul>
+            </li>
+            <!-- <li>Added score block </li>
+            <li>Added level </li> -->
+            <li>Added time</li>
+        </ul>
+    </div>
+    <div id="aboutDialog" title="">
+        <h3 class="title-info">My social networks</h3>
+        <div class="about-line">
+            <a class=" btn-pixel" href="https://www.instagram.com/myroslav_hesyk/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a class=" btn-pixel" href="https://www.facebook.com/profile.php?id=100009392538108" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a class=" btn-pixel" href="https://github.com/MyroslavHesyk" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a class=" btn-pixel" href="https://www.linkedin.com/in/myroslav-hesyk/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </div>
+    
+    
+
+   
+    <script src="./js/jquery-3.7.1.min.js"></script>
+	<script src="./js/jquery-ui.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/sound.js"></script>
+    <script src="./js/menu.js"></script>
+</body>
+</html>

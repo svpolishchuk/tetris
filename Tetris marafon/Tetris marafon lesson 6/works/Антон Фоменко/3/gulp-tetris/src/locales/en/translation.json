@@ -1,0 +1,12 @@
+{
+    "pause-title": "PAUSE",
+    "game-over-title": "GAME OVER",
+    "max": "Max",
+    "cleans": "Cleans",
+    "lvl": "Level",
+    "next": "Next",
+    "time": "Time",
+    "developer": "Developed by Fomenko Anton on the course 'Let's develop a Tetris game' by Vitaly Mazyar.",
+    "poweredBy": "Powered by ITVDN and CyberBionic Systematics.",
+    "slogan": "Everything in JavaScript is kefir!"
+}

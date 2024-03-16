@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+}
+
+body{
+    background: 
+        linear-gradient(320deg, #b4d415, rgb(230, 81, 7));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid{
+    background: rgb(3, 3, 73);
+    padding: 0.5vh;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    gap: 0.5vh;
+}
+
+.grid > div{
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background-color: rgba(182, 166, 166, 0.2);
+    border-radius: 0.3vh;
+}
+
+.grid .O{
+    background-color: rgb(143, 32, 247);
+    border-radius: 7px;
+}
+
+.grid .L{
+    background-color: rgb(211, 202, 17);
+    border-radius: 7px;
+}
+
+.grid .A{
+    /* background-color: rgb(236, 52, 175); */
+    background: 
+    linear-gradient(320deg, #9a84f9, rgb(245, 36, 130));
+    border-radius: 7px;
+}
+.grid .l{
+    /* background-color: rgb(236, 52, 175); */
+    background: 
+    linear-gradient(320deg, #f6f94f, rgb(245, 125, 179));
+    border-radius: 7px;
+}
+.grid .S{
+    /* background-color: rgb(236, 52, 175); */
+    background: 
+    linear-gradient(320deg, #fc813e, rgb(153, 250, 25));
+    border-radius: 7px;
+}
+.grid .T{
+    /* background-color: rgb(236, 52, 175); */
+    background: 
+    linear-gradient(320deg, #2acdfa, rgb(255, 12, 12));
+    border-radius: 7px;
+}
+.grid .SS{
+    /* background-color: rgb(236, 52, 175); */
+    background: 
+    linear-gradient(320deg, #9c88ee, rgb(245, 252, 36));
+    border-radius: 7px;
+}
+.grid .LL{
+    /* background-color: rgb(236, 52, 175); */
+    background: 
+    linear-gradient(320deg, #4ddbff, rgb(245, 252, 36));
+    border-radius: 7px;
+}
+.grid .K{
+    /* background-color: rgb(236, 52, 175); */
+    background: 
+    linear-gradient(320deg, #d6ff0c, rgb(23, 201, 255));
+    border-radius: 7px;
+}

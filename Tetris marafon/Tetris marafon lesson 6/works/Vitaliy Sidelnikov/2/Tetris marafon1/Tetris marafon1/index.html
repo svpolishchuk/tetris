@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tetris</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+
+<body>
+    <video autoplay muted loop class="bg-video">
+        <source src="./video/-5192.mp4" type="video/mp4">
+    </video>
+    <div class="welcome">
+        <div class="second">
+            <p>welcome</p>
+        </div>
+    </div>
+
+    <p class="text">tetris</p>
+    <!-- <div class="points">
+        <p>
+            <span>p</span>
+            <span>o</span>
+            <span>i</span>
+            <span>n</span>
+            <span>t</span>
+            <span>s</span>
+        </p>
+    </div> -->
+    <div class="grid">
+        <h2 class="points">
+            <p class="one">
+                <span>p</span>
+                <span>o</span>
+                <span>i</span>
+                <span>n</span>
+                <span>t</span>
+                <span>s</span>
+            </p>
+            <p class="total"></p>
+            <div id="musik">
+                <audio>
+                    <source src="audio/Morandi-Falling Asleep.mp3">
+                </audio>
+                <div id="sound">
+                    <img src="img/mute_sound.png">
+                </div>
+            </div>
+        </h2>
+        <!-- <div></div>
+        <div></div>
+        <div></div> -->
+    </div>
+    <p class="text">tetris</p>
+
+    <script src="js/script2.js"></script>
+    <script>
+        let gretsbox = document.querySelector('.welcome');
+        window.onload = function () {
+            setTimeout(sayHi, 2000);
+            function sayHi() {
+                console.log(gretsbox);
+                gretsbox.classList.add('change');
+
+            }
+        }
+    </script>
+</body>
+
+</html>

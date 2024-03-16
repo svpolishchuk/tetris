@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetris</title>
+    <link href="https://fonts.cdnfonts.com/css/brick" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="info-table">
+      <div id="game-title">
+        <span style="--i: 1">T</span>
+        <span style="--i: 2">e</span>
+        <span style="--i: 3">t</span>
+        <span style="--i: 4">r</span>
+        <span style="--i: 5">i</span>
+        <span style="--i: 6">s</span>
+      </div>
+      <div>
+        <p id="score"></p>
+        <p id="level"></p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- <div></div>
+      <div></div>
+      <div></div> -->
+    </div>
+
+    <div id="overlay"></div>
+    <div id="popup">
+      <div class="popupcontrols">
+        <button id="popupclose">Play again</button>
+      </div>
+      <div class="popupcontent">
+        <p>Game over</p>
+      </div>
+    </div>
+
+    <div id="pause-overlay">
+      <div id="pause-popup">
+        <div class="pause-popupcontent">
+          <h1>Game paused</h1>
+          <p>To continue playing press "Space"</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+}
+
+body {
+    background:
+        linear-gradient(320deg, #b4d415, rgb(230, 81, 7));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-video {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.grid {
+    background: rgb(24, 73, 3);
+    padding: 2.5vh;
+    border: 5px double black;
+    display: grid;
+    grid-template-columns: repeat(15, auto);
+    gap: 0.5vh;
+    position: relative;
+    box-shadow: 0px 0px 5px black, 0px 0px 10px black, 0px 0px 25px black;
+}
+
+.grid>div {
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background-color: rgba(182, 166, 166, 0.2);
+    border-radius: 0.3vh;
+}
+
+.grid .O {
+    background-color: rgb(143, 32, 247);
+}
+
+.grid .J {
+    background-color: rgb(150, 149, 112);
+}
+
+.grid .l {
+    background-color: rgb(246, 5, 17);
+}
+
+.grid .M {
+    background-color: rgb(5, 246, 69);
+}
+
+.grid .N {
+    background-color: rgb(5, 246, 246);
+}

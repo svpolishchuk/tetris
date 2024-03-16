@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+}
+
+
+body {
+    height: 100vh;
+    background: linear-gradient(38deg, rgb(140, 142, 202), #5d9cec94, #dda9cbd1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+main {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tetrisWrapper {
+    position: relative;
+    padding: 7vh 3vw;
+    background-color: black;
+    border-radius: 3vw;
+}
+
+.grid {
+    background-color: rgb(39, 23, 83);
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    gap: 0.5vh;
+    padding: 0.5vh;
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 0.3vh;
+}
+
+.grid>div {
+    height: min(3vh, 5vw);
+    width: min(3vh, 5vw);
+    background-color: rgba(9, 9, 9, 0.2);
+    border-radius: 0.3vh;
+
+}
+
+.figure {
+    -webkit-box-shadow: inset 0.2vh 0.1vh 0.6vh 0.5vh rgba(0, 0, 0, 0.47);
+    box-shadow: inset 0.2vh 0.1vh 0.6vh 0.5vh rgba(0, 0, 0, 0.47);
+}
+
+.scoreWrapper {
+    display: flex;
+    font-size: 40px;
+}
+
+.notification {
+position: absolute;
+padding: 10px;
+top: 50%;
+left: 50%;
+background:rgb(39, 23, 83);
+transform: translate(-50%, -50%);
+font-size: 32px;
+text-wrap: nowrap;
+/* width: 100%; */
+color: white;
+
+}
+
+/* .grid > .O {
+    background-color: rgb(48, 118, 66);
+}
+
+.grid > .J {
+    background-color: rgb(155, 29, 29);
+}
+
+.grid > .L {
+    background-color: rgb(234, 121, 9);
+}
+
+.grid > .T {
+    background-color: rgb(226, 219, 14);
+}
+
+.grid > .Z {
+    background-color: rgb(41, 149, 216);
+}
+
+.grid > .S {
+    background-color: rgb(211, 20, 109);
+}
+
+.grid > .I {
+    background-color: rgb(162, 30, 234);
+}
+
+.grid > .C {
+    background-color: rgb(57, 223, 11);
+}
+
+.grid > .Q {
+    background-color: rgb(0, 67, 255)
+} */

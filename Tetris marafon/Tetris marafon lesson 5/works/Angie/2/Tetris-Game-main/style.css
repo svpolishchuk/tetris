@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+}
+
+body{
+    background: 
+        linear-gradient(320deg, #91c7b1, #b33951);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.score {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.grid{
+    background: #181818;
+    padding: 0.5vh;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    gap: 0.5vh;
+    margin-top: 1rem; /* відступ від поля з грою */
+}
+
+.grid > div{
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background-color: #1f1f1f;
+    border-radius: 0.3vh;
+}
+
+.grid .I{
+    background-color: cyan;
+}
+
+.grid .O{
+    background-color: yellow;
+}
+
+.grid .T{
+    background-color: purple;
+}
+
+.grid .J{
+    background-color: blue;
+}
+
+.grid .L{
+    background-color: #ff7f00;
+}
+
+.grid .S{
+    background-color: #00ff00;
+}
+
+.grid .Z{
+    background-color: red;
+}

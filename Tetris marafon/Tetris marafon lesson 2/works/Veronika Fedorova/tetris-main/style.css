@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    rgba(5, 2, 68, 1),
+    rgba(217, 139, 199, 1)
+  ) no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game_bar {
+    display: flex;
+    align-items: flex-start;
+    gap: 5vw;
+}
+
+.sidebar_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.game_header {
+    font: 900 4rem Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(240, 179, 226);
+    text-shadow: 5px 7px #151617;;
+}
+
+.game_text{
+    font: 300 2rem 'Kolom', cursive;
+}
+
+.game_audio {
+    position: absolute;
+    top: 1vh;
+    right: 1vw;
+}
+
+audio {
+    width: 50px;
+}
+
+.media-controls.inline .time-control, .media-controls.inline .status-label {
+    display: none;
+}
+
+.grid {
+  background-color: #2f2f2f;
+  padding: 0.5vh;
+  margin-bottom: 5vh;
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  gap: 0.2vh;
+}
+
+.grid > div {
+  height: min(4vh, 7vw);
+  width: min(4vh, 7vw);
+  background-color: black;
+  border-radius: 0.3vh;
+}
+
+.grid > .O {
+  background: rgb(255, 126, 148);
+}
+
+.grid > .J {
+  background: mediumblue;
+}
+
+.grid > .L {
+    background: violet;
+}
+
+.grid > .S {
+    background: rgb(255, 233, 233);
+}
+
+.grid > .D {
+    background: pink;
+}
+
+.grid > .I {
+    background: rgb(255, 118, 68);
+}
+
+.grid > .T {
+    background: rgb(123, 203, 235);
+}
+
+.grid > .X {
+    background: khaki;
+}
+
+.grid > .C {
+    background: rgb(90, 76, 183);
+}
+
+.grid > .W {
+    background: rgb(239, 100, 100);
+}

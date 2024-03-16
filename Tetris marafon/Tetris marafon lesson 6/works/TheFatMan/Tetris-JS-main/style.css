@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+}
+
+body{
+  background: linear-gradient(40deg, rgb(81, 11, 97), rgb(0, 61, 152), rgb(81, 11, 97));
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid{
+  background: linear-gradient(rgb(140, 0, 196), rgb(29, 29, 67));
+  padding: 0.5vh;
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  gap: 0.5vh;
+}
+
+.grid div{
+  height: min(4vh, 7vw);
+  width: min(4vh, 7vw);
+  background-color: rgba(163, 221, 240, 0.2);
+  border-radius: 0.3vh;
+  border: 1px solid rgb(154, 127, 95);
+}
+
+.grid .O{
+  background-color: rgb(92, 122, 255);
+}
+
+.grid .J{
+  background-color: yellow;
+}
+
+.grid .L{
+  background-color: fuchsia;
+}
+
+.grid .I{
+  background-color: lightcoral;
+}
+
+.grid .T{
+  background-color: greenyellow;
+}
+
+.grid .Z{
+  background-color: red;
+}
+
+.grid .S{
+  background-color: burlywood;
+}

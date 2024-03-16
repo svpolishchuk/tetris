@@ -1,0 +1,112 @@
+{
+    // - Фикс бага "json ошибка" -
+    "http.proxySupport": "fallback",
+    "json.shemaDownload.enable": true,
+
+    //Вимикає підтвердження під час перетягування та викидання файлів у провіднику
+    "explorer.confirmDragAndDrop": false,
+    "liveServer.settings.CustomBrowser": "brave",
+    "liveServer.settings.ChromeDebuggingAttachment": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "liveServer.settings.port": 0,
+    //Вимикає підсвічування неоднозначних символів Unicode в редакторі коду
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+
+    //Вмикає перенесення слова, щоб текст автоматично переносився на новий рядок, якщо він не поміщається в поточному рядку.
+    "editor.wordWrap": "off",
+    //Вимикає компактний вигляд папок у провіднику проектів
+    "explorer.compactFolders": false,
+    //Встановлює тип миготливості курсору
+    "editor.cursorBlinking": "phase",
+    //Вмикає миготливість курсору у терміналі.
+    "terminal.integrated.cursorBlinking": true,
+    "window.density.editorTabHeight": "default",
+
+    // eCSSTractor - plugin
+    "ecsstractor_port.bem_nesting": true,
+    "ecsstractor_port.modifier_separator": "--",
+    "ecsstractor_port.empty_line_before_nested_selector": false,
+    "ecsstractor_port.add_comment": false,
+
+    // cSpell - plugin
+    "cSpell.language": "en,uk",
+    "cSpell.ignorePaths": [".vscode/**/*.json", "node_modules", "**/.stylelintrc.json", "**/.eslintrc.json", "**/.prettierignore", "**/.prettierrc", "**/.stylelintrc.json", "**/package-lock.json", "**/package.json", "**/tsconfig.json", "**/.htmlhintrc"],
+    "cSpell.userWords": ["stylelint"],
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    // "files.autoSave": "onFocusChange",
+
+    // "prettier.enable": true,
+    "prettier.requireConfig": true,
+    "prettier.ignorePath": ".prettierignore",
+    "prettier.configPath": ".prettierrc",
+    "prettier.useEditorConfig": true,
+    "prettier.withNodeModules": false,
+
+    // "eslint.enable": true,
+    // "eslint.probe": ["typescript"],
+    // "eslint.format.enable": true,
+    // "eslint.codeActionsOnSave.mode": "all",
+    // "[typescript]": {
+    //     "editor.codeActionsOnSave": {
+    //         "source.fixAll.eslint": true
+    //     }
+    // },
+
+    // вимкнути вбудовані в vs code лінтери
+    "css.validate": false,
+    "less.validate": false,
+    // "scss.validate": false,
+    // "stylelint.enable": true,
+    // підсвічує помилки
+    "stylelint.validate": ["scss"],
+    "[scss]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.stylelint": "explicit"
+        }
+    },
+
+    // fonts
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontLigatures": true,
+    "debug.console.fontSize": 14,
+    "terminal.integrated.fontSize": 12,
+
+    // - Отключаем не нужные Хлебные крошки -
+    "breadcrumbs.icons": false,
+    "breadcrumbs.showKeys": false,
+    "breadcrumbs.showFiles": false,
+    "breadcrumbs.symbolPath": "off",
+    "breadcrumbs.showArrays": false,
+    "breadcrumbs.showBooleans": false,
+    "breadcrumbs.showClasses": false,
+    "breadcrumbs.showConstants": false,
+    "breadcrumbs.showConstructors": false,
+    "breadcrumbs.showEnumMembers": false,
+    "breadcrumbs.showEvents": false,
+    "breadcrumbs.showFields": false,
+    "breadcrumbs.showEnums": false,
+    "breadcrumbs.showFunctions": false,
+    "breadcrumbs.showInterfaces": false,
+    "breadcrumbs.showMethods": false,
+    "breadcrumbs.showModules": false,
+    "breadcrumbs.showNamespaces": false,
+    "breadcrumbs.showNull": false,
+    "breadcrumbs.showNumbers": false,
+    "breadcrumbs.showObjects": false,
+    "breadcrumbs.showOperators": false,
+    "breadcrumbs.showPackages": false,
+    "breadcrumbs.showProperties": false,
+    "breadcrumbs.showStrings": false,
+    "breadcrumbs.showStructs": false,
+    "breadcrumbs.showTypeParameters": false,
+    "breadcrumbs.showVariables": false,
+
+    "scss.suggestVariables": true,
+
+    "workbench.tree.enableStickyScroll": true,
+    "workbench.tree.stickyScrollMaxItemCount": 7,
+    "cSpell.words": ["arrowdown", "arrowleft", "arrowright", "arrowup", "BTNS", "Gameboard", "PLAYFIELD", "tetris", "TETRO", "tetromino", "TETROMINOES"]
+}

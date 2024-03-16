@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 202 133">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4d4d4d;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-6 {
+        opacity: .5;
+      }
+
+      .cls-2 {
+        fill: #b3b3b3;
+      }
+
+      .cls-3 {
+        fill: #333;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        fill: aqua;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="cls-5" y="0" width="64" height="64"/>
+    <rect class="cls-5" y="69" width="64" height="64"/>
+    <rect class="cls-5" x="69" y="69" width="64" height="64"/>
+    <rect class="cls-5" x="138" y="69" width="64" height="64"/>
+  </g>
+  <g class="cls-6">
+    <g>
+      <rect class="cls-1" width="64" height="64"/>
+      <polyline class="cls-4" points="0 64 0 0 64 0"/>
+      <path class="cls-3" d="M61,3v58H3V3h58M64,0H0v64h64V0h0Z"/>
+      <rect class="cls-2" x="14" y="14" width="36" height="36"/>
+    </g>
+    <g>
+      <rect class="cls-1" y="69" width="64" height="64"/>
+      <polyline class="cls-4" points="0 133 0 69 64 69"/>
+      <path class="cls-3" d="M61,72v58H3v-58h58M64,69H0v64h64v-64h0Z"/>
+      <rect class="cls-2" x="14" y="83" width="36" height="36"/>
+    </g>
+    <g>
+      <rect class="cls-1" x="69" y="69" width="64" height="64"/>
+      <polyline class="cls-4" points="69 133 69 69 133 69"/>
+      <path class="cls-3" d="M130,72v58h-58v-58h58M133,69h-64v64h64v-64h0Z"/>
+      <rect class="cls-2" x="83" y="83" width="36" height="36"/>
+    </g>
+    <g>
+      <rect class="cls-1" x="138" y="69" width="64" height="64"/>
+      <polyline class="cls-4" points="138 133 138 69 202 69"/>
+      <path class="cls-3" d="M199,72v58h-58v-58h58M202,69h-64v64h64v-64h0Z"/>
+      <rect class="cls-2" x="152" y="83" width="36" height="36"/>
+    </g>
+  </g>
+</svg>

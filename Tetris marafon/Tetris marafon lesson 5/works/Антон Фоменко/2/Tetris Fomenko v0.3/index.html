@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./../img/favicon/favicon.ico" sizes="48x48">
+    <link rel="icon" href="./../img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./../img/favicon/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="./../img/favicon/site.webmanifest">
+
+    <title>Tetris</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="loader">
+        <svg class="loader__svg" width="100%" height="100%"
+            viewBox="0 0 100 100" version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+            <linearGradient id="grad-rect-1"
+                gradientTransform="rotate(0)"
+                x1="50%" y1="0%"
+                x2="50%" y2="100%">
+                <stop offset="0%" stop-color="orange" stop-opacity="0"/>
+                <stop offset="100%" stop-color="orange" stop-opacity="1"/>
+            </linearGradient>
+    
+            <rect class="loader__rect rect-1" x="51" y="39" width="10" height="10"
+                stroke="blue" stroke-weight="1px"/>
+            <rect class="loader__rect rect-2" x="39" y="39" width="10" height="10"
+                stroke="blue" stroke-weight="1px"/>
+            <rect class="loader__rect rect-3" x="39" y="51" width="10" height="10"
+                stroke="blue" stroke-weight="1px"/>
+        </svg>
+    </div>
+
+    <header class="header non-select">
+        <div class="container">
+            <div class="header__inner">
+                <span class="header__title">TETRIS</span>
+                <div class="header__game-styles game-styles">
+                    <div class="game-styles__block classic" data-style="classic">
+                        <img src="./img/classic.png" alt="classic">
+                    </div>
+                    <div class="game-styles__block chopped" data-style="chopped">
+                        <img src="./img/chopped.png" alt="chopped">
+                    </div>
+                    <div class="game-styles__block bubble" data-style="bubble">
+                        <img src="./img/bubble.png" alt="bubble">
+                    </div>
+                    <div class="game-styles__block lego" data-style="lego">
+                        <img src="./img/lego.png" alt="lego">
+                    </div>
+                    <div class="game-styles__block panel" data-style="panel">
+                        <img src="./img/panel.png" alt="panel">
+                    </div>
+                    <div class="game-styles__block puzzle" data-style="puzzle">
+                        <img src="./img/puzzle.png" alt="puzzle">
+                    </div>
+                    <div class="game-styles__block skull" data-style="skull">
+                        <img src="./img/skull.png" alt="skull">
+                    </div>
+                </div>
+                <input type="color" name="colorPicker" id="colorPicker">
+                <div class="header__game-lang game-lang">
+                    <span class="game-lang__en" data-lang="en">EN</span> | 
+                    <span class="game-lang__uk" data-lang="uk">UK</span>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="tetris non-select">
+            <div class="tetris__title">SUPER</div>
+            <div class="tetris__decor"></div>
+            <div class="tetris__decor"></div>
+            <div class="tetris__version">v 0.3</div>
+            <div class="tetris__inner">
+                <div class="display__border">
+                    <div class="display__wrapper">
+                        <div class="tetris__display display">
+                            <div class="display__play-field play-field">
+                                <div class="display__pause-title">PAUSE</div>
+                                <!-- <div class="play-field__cell classic"></div> -->
+                            </div>
+                            <div class="display__game-statistics game-statistics">
+                                <div class="game-statistics__block">
+                                    <p class="game-statistics__title game-statistics__max"><!-- Max --></p>
+                                    <div class="game-statistics__value">000000<span id="maximum-points"></span></div>
+                                </div>
+                                <div class="game-statistics__block">
+                                    <p class="game-statistics__title game-statistics__cleans"><!-- Cleans --></p>
+                                    <div class="game-statistics__value">000000<span id="cleared-lines"></span></div>
+                                </div>
+                                <div class="game-statistics__block">
+                                    <p class="game-statistics__title game-statistics__lvl"><!-- Level --></p>
+                                    <div class="game-statistics__value"><span id="level"></span></div>
+                                </div>
+                                <div class="game-statistics__block game-statistics__block-next">
+                                    <p class="game-statistics__title game-statistics__next"><!-- Next --></p>
+                                    <div class="game-statistics__value next-tetromino" id="next-tetromino">
+                                        <!-- <div class="next-tetromino__row">
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                        </div>
+                                        <div class="next-tetromino__row">
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="game-statistics__block">
+                                    <p class="game-statistics__title game-statistics__time"><!-- Time --></p>
+                                    <div class="game-statistics__value">
+                                        <span class="icon-without-sound" id="icon-without-sound"></span>
+                                        <span class="icon-pause" id="icon-pause"></span>
+                                        <span id="game-time">00:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <p class="footer__developer">Developed by Fomenko Anton on the course "Let's develop a Tetris game" by Vitaly Mazyar.</p>
+                <p class="footer__powered-by">Powered by ITVDN and CyberBionic Systematics.</p>
+                <p class="footer__slogan">Everything in JavaScript is kefir!</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="info-window">
+        <div class="info-window__inner">
+
+            <h3 class="info-window__title">керування клавішами:</h3>
+            <ul class="info-window__list">
+                <li class="info-window__item">вліво - A</li>
+                <li class="info-window__item">вправо - D</li>
+                <li class="info-window__item">вниз - S</li>
+                <li class="info-window__item">обертання - W</li>
+                <li class="info-window__item">пауза - P</li>
+                <li class="info-window__item">зміна фігури - Ctrl</li>
+            </ul>
+
+            <hr>
+
+            <div class="info-window__changelog">
+
+
+                <h3 class="info-window__title">версія 0.3</h3>
+                <ul class="info-window__list">
+                    <li class="info-window__item">додано власний спосіб обертання фігур</li>
+                    <li class="info-window__item">реалізовано увімк/вимк звуку</li>
+                    <li class="info-window__item">реалізована пауза</li>
+                    <li class="info-window__item">реалізовано таймер</li>
+                    <li class="info-window__item">логіка нарахування балів</li>
+                    <li class="info-window__item">відображення наступної фігури та її кольору</li>
+                    <li class="info-window__item">збільшення рівня</li>
+                    <li class="info-window__item">збільшення швидкості з рівнем</li>
+                    <!-- <li class="info-window__item"></li> -->
+                </ul>
+
+                <hr>
+
+                <h3 class="info-window__title">версія 0.2</h3>
+                <ul class="info-window__list">
+                    <li class="info-window__item">зроблено переклад (вибирається автоматично, або можна вручну)</li>
+                    <li class="info-window__item">додано фавікон</li>
+                    <li class="info-window__item">додано лоадер</li>
+                    <li class="info-window__item">підготовка до наступних кроків</li>
+                </ul>
+
+                <hr>
+
+                <h3 class="info-window__title">версія 0.1</h3>
+                <ul class="info-window__list">
+                    <li class="info-window__item">вибір стилю гри</li>
+                    <li class="info-window__item">вибір кольору для консолі</li>
+                    <li class="info-window__item">рухи ←↓→</li>
+                    <li class="info-window__item">додано 7 фігур</li>
+                    <li class="info-window__item">зміна фігури в ручному режимі</li>
+                    <li class="info-window__item">додано кілька звуків</li>
+                </ul>
+
+                <hr>
+
+                <h3 class="info-window__title">в наступних версіях</h3>
+                <ul class="info-window__list">
+                    <li class="info-window__item">очищення лінії + реалізація відповідної статистики</li>
+                    <li class="info-window__item">більше звуків</li>
+                    <li class="info-window__item">адаптив під смартфони + кнопки керування</li>
+                    <li class="info-window__item">оптимізація коду, розмітки та стилів</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="info-window__btn">
+            <span class="info-window__arrow">▼</span>
+        </div>
+    </div>
+
+    <script type="module" src="./js/modules/_loader.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/constants/_constants.js"></script>
+    <script type="module" src="./js/modules/_decor.js"></script>
+    <script type="module" src="./js/modules/_header.js"></script>
+    <script type="module" src="./js/modules/_i18n.js"></script>
+
+</body>
+</html>

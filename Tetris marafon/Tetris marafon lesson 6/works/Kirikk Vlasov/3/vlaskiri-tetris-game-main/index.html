@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./styles/newReset.css" />
+		<link rel="stylesheet" href="./styles/index.css" />
+		<title>TETRIS</title>
+	</head>
+	<body>
+		<main class="main-block">
+			<div class="main-content">
+				<h1 class="title">TETRIS</h1>
+
+				<div class="main-grid">
+					<!-- Matrix Tetris in JS file -->
+				</div>
+
+				<div class="main-flex__scores-block">
+					<div class="circle">
+						<button id="pause-game" class="pause-game"></button>
+					</div>
+
+					<div class="next-element">
+						Next element
+						<div class="next-element__block"></div>
+					</div>
+					<div class="all-time-game">
+						<span>Time</span>
+						<p id="timer">00:00:00</p>
+					</div>
+					<div id="score" class="all-score">
+						Score
+						<p>000000</p>
+					</div>
+
+					<div class="music">
+						<audio id="audioPlayer" loop autoplay="true">
+							<source src="./assets/sound-for-tetris.mp3" />
+							Your browser does not support the audio element.
+						</audio>
+
+						<h2>Music</h2>
+						<select id="soundSelect">
+							<option value="./assets/sound-for-tetris.mp3">
+								TRON Legacy - End of Line
+							</option>
+							<option value="./assets/stranger-things-124008.mp3">
+								Stranger Things
+							</option>
+							<option value="./assets/sound-for-tetris2.mp3">
+								TRON Legacy - End Titles
+							</option>
+						</select>
+
+						<button id="toggleSoundButton">
+							<img
+								id="soundImage"
+								src="./assets/unmuteIcon.png"
+								alt="sound image"
+							/>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="control-panel">
+				<div class="move-control">
+					<div id="up" class="up">
+						<button></button>
+					</div>
+					<div id="left" class="left">
+						<button></button>
+					</div>
+					<div id="down" class="down">
+						<button></button>
+					</div>
+					<div id="right" class="right">
+						<button></button>
+					</div>
+				</div>
+
+				<div class="restart-game">
+					<button id="restart-game">
+						<img src="./assets/restartIcon.png" alt="restart game icon" />
+					</button>
+				</div>
+			</div>
+			<div class="overlay__game-over">
+				<button id="game-over-restart">Game Over 😟 Restart</button>
+			</div>
+			<div class="overlay__pause">
+				<button id="pause">Pause 😟 Continue</button>
+			</div>
+		</main>
+
+		<script src="./javascript/index.js"></script>
+	</body>
+</html>

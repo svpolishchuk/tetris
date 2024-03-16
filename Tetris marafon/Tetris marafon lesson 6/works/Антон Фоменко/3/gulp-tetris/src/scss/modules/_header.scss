@@ -1,0 +1,145 @@
+.header {
+    /* position: fixed; */
+    top: 0;
+    z-index: 100;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    background-color: $main-bg;
+    box-shadow: 0 3px 10px 0 black;
+    
+    &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vh;
+    align-items: center;
+    justify-content: space-evenly;
+    }
+    
+    &__title {
+        font-size: 30px;
+    }
+    
+    &__game-styles {
+    }
+    
+    &__player {
+        
+    }
+
+    &__game-lang {
+    }
+}
+
+.game-styles {
+    flex: 0 1 auto;
+
+    &__block {
+        display: inline-block;
+        max-width: 20px;
+        max-height: 20px;
+        margin: 0 4px;
+        cursor: pointer;
+        
+        &:hover {
+            box-shadow: 0 0 1px 2px gold;
+            opacity: 0.5;
+        }
+
+        & > picture {
+            max-height: 26px;
+            opacity: 0.5;
+        }
+
+        &.classic {
+            background-color: darkgray;
+
+            & > picture {
+                opacity: 1;
+            }
+        }
+        
+        &.chopped {
+            background-color: red;
+        }
+        
+        &.bubble {
+            background-color: rgb(96 154 201);
+            border-radius: 50%;
+        }
+        
+        &.lego {
+            background-color: #ff2fdc;
+        }
+        
+        &.panel {
+            background-color: rgb(23 160 64);
+            border-radius: 4px;
+        }
+        
+        &.puzzle {
+            background-color: #4736a8;
+            border-radius: 50%;
+        }
+        
+        &.skull {
+            background-color: black;
+            border-radius: 4px;
+        }
+    
+        &.active {
+            box-shadow: 0 0 1px 1px orangered;
+            animation-name: active-style;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+.game-lang {
+    &__en {
+        cursor: pointer;
+        
+        &:hover {
+            color: orange;
+        }
+    }
+    
+    &__uk {
+        cursor: pointer;
+        
+        &:hover {
+            color: orange;
+        }
+    }
+}
+
+@keyframes active-style {
+    0% {
+        box-shadow: 0 0 2px 2px rgb(180 8 196);
+    }
+
+    50% {
+        box-shadow: 0 0 1px 1px rgb(61 169 196 / 0%);
+    }
+
+    100% {
+        box-shadow: 0 0 2px 2px rgb(180 8 196);
+    }
+}
+
+
+#color-picker {
+    padding: 0 1px;
+    background-color: #262626;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#audioPlayer {
+    max-height: 2vh;
+}

@@ -1,0 +1,73 @@
+{
+    "name": "tetris",
+    "version": "0.3",
+    "description": "",
+    "private": true,
+    "type": "module",
+    "main": "./src/js/main.js",
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development gulp build",
+        "prod": "cross-env NODE_ENV=production gulp build",
+        "fontsGen": "node fontsGen.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.23.9",
+        "@babel/preset-env": "^7.23.9",
+        "browser-sync": "^3.0.2",
+        "cross-env": "^7.0.3",
+        "css-loader": "^6.10.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^9.0.0",
+        "gulp-babel": "^8.0.0",
+        "gulp-changed": "^5.0.2",
+        "gulp-clean": "^0.4.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-csso": "^4.0.1",
+        "gulp-environments": "^1.0.1",
+        "gulp-file-include": "^2.3.0",
+        "gulp-imagemin": "^9.0.0",
+        "gulp-notify": "^4.0.0",
+        "gulp-plumber": "^1.2.1",
+        "gulp-sass": "^5.1.0",
+        "gulp-sass-glob": "^1.1.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "gulp-ttf2woff": "^1.1.1",
+        "gulp-ttf2woff2": "^4.0.1",
+        "gulp-webp": "^5.0.0",
+        "gulp-webp-css-fixed": "^1.1.0",
+        "gulp-webp-html": "^1.0.2",
+        "postcss": "^8.4.35",
+        "postcss-sort-media-queries": "^5.2.0",
+        "prettier": "^3.2.5",
+        "prettier-plugin-organize-attributes": "^1.0.0",
+        "sass": "^1.71.1",
+        "style-loader": "^3.3.4",
+        "stylelint": "^16.2.1",
+        "stylelint-config-standard": "^36.0.0",
+        "stylelint-config-standard-scss": "^13.0.0",
+        "stylelint-order": "^6.0.4",
+        "stylelint-prettier": "^5.0.0",
+        "stylelint-scss": "^6.1.0",
+        "webfonts-generator": "^0.4.0",
+        "webpack": "^5.90.3",
+        "webpack-stream": "^7.0.0"
+    },
+    "babel": {
+        "presets": [
+            "@babel/preset-env"
+        ]
+    },
+    "browserslist": [
+        "last 5 versions"
+    ],
+    "dependencies": {
+        "gulp-htmlmin": "^5.0.1",
+        "handlebars": "^4.7.8",
+        "i18next": "^23.10.0",
+        "i18next-browser-languagedetector": "^7.2.0",
+        "i18next-http-backend": "^2.5.0"
+    }
+}

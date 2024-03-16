@@ -1,0 +1,23 @@
+
+@media only screen and (width >= 640px) {
+    .tetris__decor {
+        display: grid;
+    }
+
+    
+}
+
+@media only screen and (width < 640px) {
+    .tetris__left-gamepad {
+        /* transform: translate(-58%, 0); */
+        display: none;
+        
+    }
+    
+    .tetris__right-gamepad {
+        /* transform: translate(58%, 0) scaleX(-1); */
+        display: none;
+        
+    }
+    
+}

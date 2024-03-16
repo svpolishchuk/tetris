@@ -1,0 +1,78 @@
+* {
+  font-family: "Verite 8x16", "IBM VGA 8x16", monospace;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+
+.leftBar,
+.rightBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+
+  min-width: 18vw;
+  padding: 0.2vw;
+  padding-top: 1vh;
+  background-color: green;
+}
+
+.leftBar > .tips {
+  display: flex;
+  gap: 10px;
+  font-size: 22px;
+}
+.leftBar > .tips > div > p {
+  white-space: nowrap;
+}
+
+.playField {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  gap: 5px;
+  padding: 0.55vh;
+  border: solid rgb(7, 180, 7) 0.25vh;
+}
+
+.playField > div {
+  background-color: green;
+  width: 4vh;
+  height: 4vh;
+}
+
+.playField > .O {
+  background-color: yellow;
+}
+
+.playField > .J {
+  background-color: blue;
+}
+
+.playField > .I {
+  background-color: slateblue;
+}
+.playField > .S {
+  background-color: rgb(1, 75, 37);
+}
+.playField > .T {
+  background-color: rgb(218, 145, 202);
+}
+.playField > .Z {
+  background-color: red;
+}
+.playField > .L {
+  background-color: rgb(153, 135, 34);
+}

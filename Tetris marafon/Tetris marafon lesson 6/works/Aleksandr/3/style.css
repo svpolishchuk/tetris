@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url("images/pngtree-tetris-wallpaper-hd-1080p-picture-image_2779801.jpg");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.45);
+    display: none;
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-restart{
+    width: 250px;
+    height: 120px;
+    background: linear-gradient(320deg, #bb4589, #00ff00);
+    border-radius: 20px;
+    border: none;
+    font-size: 55px;
+    box-shadow: 0 2px 10px 10px #000;
+    cursor: pointer;
+}
+
+.gameFieldOverlay{
+    display: grid;
+    grid-template-columns: 4fr 5fr 5fr;
+}
+
+.gameFieldInfo{
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    margin-top: 40px;
+    justify-content: start;
+
+
+    color: #222;
+    background: linear-gradient(90deg, #0f0, #1899ff, #f0f, #f00, #ff0 90%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0.04em transparent;
+    font-size: 1em;
+    animation: animate 1.5s linear infinite;
+
+}
+
+.score{
+    padding-left: 10px;
+}
+
+.linesTitle {
+    display: flex;
+    color: #0dffff;
+    margin-bottom: 10px;
+}
+
+.lines{
+    padding-left: 21px;
+}
+
+.level{
+    padding-left: 17px;
+}
+
+h2{
+    color: #222;
+    background: linear-gradient(90deg, #0f0, #1899ff, #f0f, #f00, #ff0 90%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0.04em transparent;
+    font-size: 4em;
+    animation: animate 1.5s linear infinite;
+}
+
+
+
+.grid {
+    background: #333333;
+    padding: 0.5vh;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    gap: 0.5vh;
+
+}
+
+.grid div {
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background-color: rgba(182, 166, 166, 0.2);
+    border-radius: 0.3vh;
+}
+
+.grid .O {
+    background: linear-gradient(45deg, #0033ff, #0cff00);
+}
+
+.grid .J {
+    background: linear-gradient(45deg, #0000C8, #f9280e);
+}
+
+.grid .L {
+    background: linear-gradient(45deg, #f90f71, #3c19e5);
+}
+
+.grid .I {
+    background: linear-gradient(45deg, #0dffff, #f900a9);
+}
+
+.grid .S {
+    background: linear-gradient(45deg, #7cf801, #ff0000);
+}
+
+.grid .Z {
+    background: linear-gradient(45deg, #D71414FF, #21fd00);
+}
+
+.grid .T {
+    background: linear-gradient(45deg, #9200d3, #01fb47);
+}
+
+
+.timer-overlay{
+    display: flex;
+    padding-left: 25px;
+}
+
+.control{
+    display: flex;
+    justify-content: center;
+}
+
+.control-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+}
+
+h3, h4{
+    color: #e50a0a;
+    background: linear-gradient(90deg, #63fd63, #1899ff, #f0f,#ff0 90%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0.04em transparent;
+    font-size: 1.5em;
+    animation: animate 5.5s linear infinite;
+}
+
+
+@keyframes animate{
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+

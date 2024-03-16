@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <span class="header__title">TETRIS</span>
+                <div class="header__game-styles game-styles">
+                    <div class="game-styles__block game-style classic" data-style="classic">
+                        <img class="game-style__img classic" src="./img/classic.png" alt="classic">
+                    </div>
+                    <div class="game-styles__block game-style chopped" data-style="chopped">
+                        <img class="game-style__img chopped" src="./img/chopped.png" alt="chopped">
+                    </div>
+                    <div class="game-styles__block game-style bubble" data-style="bubble">
+                        <img class="game-style__img bubble" src="./img/bubble.png" alt="bubble">
+                    </div>
+                    <div class="game-styles__block game-style lego" data-style="lego">
+                        <img class="game-style__img lego" src="./img/lego.png" alt="lego">
+                    </div>
+                    <div class="game-styles__block game-style panel" data-style="panel">
+                        <img class="game-style__img panel" src="./img/panel.png" alt="panel">
+                    </div>
+                    <div class="game-styles__block game-style puzzle" data-style="puzzle">
+                        <img class="game-style__img puzzle" src="./img/puzzle.png" alt="puzzle">
+                    </div>
+                    <div class="game-styles__block game-style skull" data-style="skull">
+                        <img class="game-style__img skull" src="./img/skull.png" alt="skull">
+                    </div>
+                </div>
+                <input type="color" name="colorPicker" id="colorPicker">
+                <div class="header__game-lang game-lang">
+                    <span class="game-lang__en">EN</span> | 
+                    <span class="game-lang__uk">UK</span>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="tetris">
+            <div class="tetris__title">SUPER</div>
+            <div class="tetris__decor"></div>
+            <div class="tetris__decor"></div>
+            <div class="tetris__version">v 0.1</div>
+            <div class="tetris__inner">
+                <div class="display__border">
+                    <div class="display__wrapper">
+                        <div class="tetris__display display">
+                            <div class="display__play-field play-field">
+                                <!-- <div class="play-field__cell classic"></div> -->
+                            </div>
+                            <div class="display__game-statistics game-statistics">
+                                <div class="game-statistics__block">
+                                    <p class="game-statistics__title">Max</p>
+                                    <div class="game-statistics__value" data-type="max" data-meaning="123"><span>000</span>123</div>
+                                </div>
+                                <div class="game-statistics__block">
+                                    <p class="game-statistics__title">Cleans</p>
+                                    <div class="game-statistics__value" data-type="clean" data-meaning="123"><span>000</span>123</div>
+                                </div>
+                                <div class="game-statistics__block">
+                                    <p class="game-statistics__title">Level</p>
+                                    <div class="game-statistics__value" data-type="lvl" data-meaning="1">1</div>
+                                </div>
+                                <div class="game-statistics__block">
+                                    <p class="game-statistics__title">Next</p>
+                                    <div class="game-statistics__value next-tetromino">
+                                        <div class="next-tetromino__row">
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                        </div>
+                                        <div class="next-tetromino__row">
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                            <div class="next-tetromino__cell classic"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="game-statistics__block">
+                                    <p class="game-statistics__title">Time</p>
+                                    <div class="game-statistics__value">
+                                        <span>S</span><span>P</span><span>00:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <p>Developed by Fomenko Anton on the course "Let's develop a Tetris game" by Vitaly Mazyar.</p>
+                <p>Powered by ITVDN and CyberBionic Systematics.</p>
+                <p>Everything in JavaScript is kefir!</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="info-window">
+        <div class="info-window__inner">
+
+            <h3 class="info-window__title">керування клавішами:</h3>
+            <ul class="info-window__list">
+                <li class="info-window__item">вліво - A</li>
+                <li class="info-window__item">вправо - D</li>
+                <li class="info-window__item">вниз - S</li>
+                <li class="info-window__item">зміна фігури - Ctrl</li>
+            </ul>
+
+            <hr>
+
+            <h3 class="info-window__title">версія 0.1</h3>
+            <ul class="info-window__list">
+                <li class="info-window__item">вибір стилю гри</li>
+                <li class="info-window__item">вибір кольору для консолі</li>
+                <li class="info-window__item">рухи ←↓→</li>
+                <li class="info-window__item">додано 7 фігур</li>
+                <li class="info-window__item">зміна фігури в ручному режимі</li>
+                <li class="info-window__item">додано кілька звуків</li>
+            </ul>
+
+            <hr>
+
+            <h3 class="info-window__title">в наступних версіях</h3>
+            <ul class="info-window__list">
+                <li class="info-window__item">вибір мови</li>
+                <li class="info-window__item">статистика</li>
+                <li class="info-window__item">більше звуків</li>
+                <li class="info-window__item">додати лоадер</li>
+                <li class="info-window__item">оптимізація коду, розмітки та стилів</li>
+            </ul>
+
+        </div>
+        <div class="info-window__btn">
+            <span class="info-window__arrow">▼</span>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1 {
+    font-size: 8em;
+    padding-top: 2vh;
+    align-self: center;
+}
+p {
+    font-size: 4em;
+}
+:root {
+    --grid-bg-color: #0b0c10;
+    --div-bg-color: #1f2833;
+    --body-bg-color-first: #041e1f;
+    --body-bg-color-second: #9ca6a4;
+    --font-color: #031513;
+
+    --cell-o-bg-color: #66fcf1;
+    --cell-j-bg-color: #7a66fc;
+    --cell-i-bg-color: #cc66fc;
+    --cell-t-bg-color: #66fcbd;
+    --cell-z-bg-color: #effc66;
+}
+
+body {
+    background: var(--body-bg-color-second);
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--font-color);
+}
+.grid {
+    background: var(--grid-bg-color);
+    padding: 0.5vh;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    gap: 0.5vh;
+}
+.grid > div {
+    height: min(4vh, 7vw);
+    width:  min(4vh, 7vw);
+    background-color: var(--div-bg-color);
+    border-radius: 0.3vh;
+}
+
+.grid .O {
+    background-color: var(--cell-o-bg-color);
+}
+
+.grid .J {
+    background-color: var(--cell-j-bg-color);
+}
+
+.grid .I {
+    background-color: var(--cell-i-bg-color);
+}
+
+.grid .T {
+    background-color: var(--cell-t-bg-color);
+}
+
+.grid .Z {
+    background-color: var(--cell-z-bg-color);
+}
+

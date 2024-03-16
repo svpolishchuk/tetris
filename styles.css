@@ -1,0 +1,473 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  touch-action: none;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: linear-gradient(180deg, rgb(42, 0, 255) 0%, #5580ff 80%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Sarpanch", sans-serif;
+  touch-action: manipulation;
+}
+
+.title {
+  font-family: "Press Start 2P", cursive;
+  grid-area: text;
+  font-size: 10vmin;
+  margin-bottom: 10px;
+  color: #21aeb8;
+  text-shadow: 0.5vmin 0.5vmin 0 #e79c10, -0.5vmin -0.5vmin 0 #d53a33;
+}
+
+.content {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visible-grid {
+  background-color: #3658a7cb;
+}
+
+.grid {
+  background: rgba(20, 1, 114, 0.5);
+  border-radius: 10px;
+  padding: 1vh;
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  gap: 1vh;
+}
+
+.grid > div {
+  height: min(3vh, 7vh);
+  width: min(3vh, 7vh);
+  border-radius: 0.3vh;
+}
+
+.grid .O {
+  background: rgb(252, 255, 64);
+}
+
+.grid .J {
+  background: rgb(156, 255, 42);
+}
+
+.grid .T {
+  background: rgb(255, 0, 234);
+}
+
+.grid .I {
+  background: rgb(0, 255, 204);
+}
+
+.grid .S {
+  background: rgb(37, 238, 37);
+}
+
+.grid .Z {
+  background: rgb(255, 0, 0);
+}
+
+.grid .L {
+  background: rgb(255, 133, 19);
+}
+
+.inform {
+  width: 300px;
+  height: 100%;
+  margin-left: 5px;
+  background-color: rgba(20, 1, 114, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 10px;
+}
+
+.game-info {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+.styled-button {
+  font-family: "Press Start 2P", cursive;
+  font-size: 2em;
+  color: white;
+  background-color: rgba(20, 1, 114, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.styled-button:hover {
+  background-color: rgba(20, 1, 114, 1);
+}
+
+.menu-button {
+  line-height: 25px;
+  flex-basis: calc(50% - 5px);
+  padding: 10px 0px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1em;
+  color: white;
+  background-color: rgba(20, 1, 114, 0.8);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.menu-button {
+  margin: 10px;
+  text-align: center;
+}
+.music-button {
+  width: 40px;
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+.score,
+.time,
+.lvl {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.score-container {
+  width: 90%;
+  height: 70%;
+  background-color: rgba(20, 1, 114, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.score-title,
+.score-value {
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  margin: 10px 0 10px 0;
+}
+
+.score-title {
+  font-size: 2em;
+  text-align: center;
+  color: rgb(250, 245, 239);
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.score-value {
+  margin: auto;
+  margin-top: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.timer-title,
+.level-title {
+  line-height: 25px;
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  font-size: 1em;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+#timer,
+#level {
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#timer {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Додаткові стилі для мобільної версії */
+
+@media screen and (max-width: 600px) {
+  .timer-title,
+  .level-title {
+    font-size: 0.8em;
+  }
+
+  #timer,
+  #level {
+    font-size: 1.2em;
+  }
+}
+
+#background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.falling-square {
+  position: absolute;
+  opacity: 0.3;
+}
+
+.next-tetromino {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+
+.next-tetromino h3 {
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  line-height: 25px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.next-tetromino-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 5px;
+  margin: 0 auto;
+}
+.next-tetromino-grid > div {
+  border-radius: 0.3vh;
+}
+
+.next-tetromino-cell {
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+}
+
+.next-tetromino-cell.O {
+  background: rgb(252, 255, 64);
+}
+
+.next-tetromino-cell.J {
+  background: rgb(156, 255, 42);
+}
+
+.next-tetromino-cell.T {
+  background: rgb(174, 0, 255);
+}
+
+.next-tetromino-cell.I {
+  background: rgb(0, 255, 204);
+}
+
+.next-tetromino-cell.S {
+  background: rgb(37, 238, 37);
+}
+
+.next-tetromino-cell.Z {
+  background: rgb(255, 0, 0);
+}
+
+.next-tetromino-cell.L {
+  background: rgb(255, 133, 19);
+}
+
+.modal,
+.modal-menu,
+#list-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 400px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+ul {
+  text-align: start;
+}
+.list-item {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+.list-item:nth-child(1) {
+  margin-top: 30px;
+}
+
+.modal-content,
+.modal-menu-content,
+#list-container-content {
+  position: absolute;
+  min-width: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(114, 1, 108, 0.856);
+  line-height: 1.5;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: "Press Start 2P";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.buttons-menu {
+  display: flex;
+  flex-direction: column;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btn-ok,
+.btn-cancel {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #c455ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: "Press Start 2P";
+  font-size: 16px;
+  flex-grow: 1;
+  margin: 0 5px;
+}
+
+.btn-ok:hover,
+.btn-cancel:hover {
+  background-color: #3658a7;
+}
+
+/* for mobile */
+@media screen and (max-width: 600px) {
+  body {
+    justify-content: space-evenly;
+  }
+  .title {
+    margin-top: 10px;
+  }
+
+  .grid {
+    gap: 0.3vh;
+    margin: 0 10px 5px 0;
+  }
+
+  .grid > div {
+    height: min(2vh, 5vh);
+    width: min(2vh, 5vh);
+    border-radius: 0.1vh;
+  }
+  .content {
+    width: 95%;
+  }
+
+  /* .next-tetromino {
+    margin: 10px 0 10px 0;
+  } */
+
+  .next-tetromino h3 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .next-tetromino-grid > div {
+    height: min(1.5vh, 5vh);
+    width: min(1.5vh, 5vh);
+    border-radius: 0.1vh;
+  }
+
+  .inform {
+    width: 40%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .styled-button {
+    font-size: 1.2em;
+  }
+
+  .controls-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    padding: 10px;
+    background-color: rgba(20, 1, 114, 0.5);
+    border: none;
+    border-radius: 70px;
+  }
+
+  .other-buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .control-button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    background-color: rgba(20, 1, 114, 0.8);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin: 2px;
+  }
+
+  .control-button:hover {
+    background-color: rgba(20, 1, 114, 1);
+  }
+
+  .score-title {
+    font-size: 1em;
+  }
+  .score-value {
+    margin: auto;
+    font-size: 0.9em;
+  }
+}

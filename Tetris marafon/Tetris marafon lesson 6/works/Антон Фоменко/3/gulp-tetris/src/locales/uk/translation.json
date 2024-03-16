@@ -1,0 +1,12 @@
+{
+    "pause-title": "ПАУЗА",
+    "game-over-title": "ВИ ПРОГРАЛИ :)",
+    "max": "Максимум",
+    "cleans": "Очищено",
+    "lvl": "Рівень",
+    "next": "Наступна",
+    "time": "Час",
+    "developer": "Розробив Фоменко Антон на курсі 'Пишемо гру Тетріс' Віталія Мазяра.",
+    "poweredBy": "За підтримки ITVDN та CyberBionic Systematics.",
+    "slogan": "Все в JavaScript - це кефір!"
+}

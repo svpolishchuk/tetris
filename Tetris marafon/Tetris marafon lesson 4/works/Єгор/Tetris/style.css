@@ -1,0 +1,90 @@
+/* *{
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(337deg,#b4b415,rgb(225, 135, 10));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid{
+    background: rgb(3, 3, 73);
+    padding: 0.5vh;
+    display: grid;
+    grid-template-columns: repeat(10,auto);
+    gap: 0.5vh;
+}
+
+.grid > div{
+    height: min(4hv,7vw);
+    width: min(4hv,7vw);
+    background: rgba(182, 166, 166,0.2);
+    border-radius: 0.3hv;
+}
+ */
+
+
+
+
+ * {
+    margin: 0;
+  }
+  
+  body {
+    height: 100vh;
+    background: 
+     linear-gradient(337deg,#b4b415,rgb(225, 135, 10));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .grid {
+    background: rgb(0, 0, 157);
+    padding: 0.5vh;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    gap: 0.5vh;
+  }
+  
+  .grid > div {
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background-color: rgba(103, 255, 8, 0.2);
+    border-radius: 0.3vh;
+  }
+  
+  .grid > .O {
+    background: rgb(128, 0, 255);
+  }
+  
+  .grid > .J {
+    background: rgb(0, 239, 108);
+  }
+
+  .grid > .L {
+    background: rgb(153, 199, 14);
+  }
+
+  .grid > .I {
+    background: rgb(199, 14, 159);
+  }
+
+  
+
+  .grid > .T {
+    background: rgb(239, 0, 151);
+  }
+
+
+  .grid >.S {
+    background-color: rgb(212, 41, 41);
+}
+
+.grid > .Z {
+    background-color: rgb(109, 206, 146);
+}
+  

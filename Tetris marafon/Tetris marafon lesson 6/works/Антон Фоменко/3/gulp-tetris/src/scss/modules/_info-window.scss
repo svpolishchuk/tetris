@@ -1,0 +1,99 @@
+// ---------------------------------------------- INFO-WINDOW START
+
+.info-window {
+    position: fixed;
+    top: 50%;
+    left: -350px;
+    z-index: 90;
+    display: inline-block;
+    width: 350px;
+    padding: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: #1a1a1a;
+    border: 2px solid #000;
+    border-radius: 0 10px 10px 0;
+    transition: 1s;
+    transform: translate( 0, -50% );
+
+    &.active {
+        left: 0;
+    }
+
+    &__inner {
+        max-height: 75vh;
+        padding: 10px;
+        margin: 3px;
+        overflow: auto;
+        border-radius: 0 10px 10px 0;
+        box-shadow: inset 0 0 10px 2px rgb(37 37 37);
+        scrollbar-width: 2px;
+        scrollbar-color: #212121;
+        
+        & > .info-window__list {
+            padding-left: 10px;
+        }
+    }
+
+    &__changelog {
+        max-height: 50vh;
+        padding: 0 10px;
+        overflow: auto;
+        scrollbar-width: 2px;
+        scrollbar-color: #212121;
+
+        & > .info-window__title {
+            position: relative;
+            left: -10px;
+        }
+
+        & > .info-window__list {
+            list-style: disc;
+        }
+    }
+
+    &__title {
+
+    }
+
+    &__list {
+        margin-left: 10px;
+        list-style: circle;
+
+    }
+
+    &__item {
+        margin-top: 4px;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        padding: 5px;
+        cursor: pointer;
+        background-color: #1a1a1a;
+        border: 2px solid #000;
+        border-left: 0;
+        border-radius: 0 10px 10px 0;
+        transform: translate( 100%, -50% );
+        
+        &:hover {
+            background-color: #2e2e2e;
+        }
+    }
+
+    &__arrow {
+        display: inline-block;
+        transition: 1s;
+        transform: rotate(270deg);
+
+        &.active {
+            transform: rotate(90deg);
+        }
+    }
+
+
+}
+
+// ---------------------------------------------- INFO-WINDOW END
